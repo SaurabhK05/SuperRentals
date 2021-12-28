@@ -1,0 +1,34 @@
+<div class="rentals">
+    <label >
+        <span>Where would you like to stay?</span>
+        {{!-- <tr class="inputbutton">
+            <th>
+                <button type="submit" class = "clear-button">Clear</button>
+            </th>
+            <th>
+                <Input class="light" @value = {{this.query}} /> 
+            </th>
+        </tr> --}}
+        {{!-- <div class="searchbox">
+            <form>
+                <button type="submit" >Clear</button>
+                <Input class="light" @value = {{this.query}} /> 
+            </form>
+        </div> --}}
+        <form> 
+            <input type="text" name="text" class="search" placeholder="Search here!">
+            <input type="submit" name="submit" class="submit" value="Search">
+        </form>
+            
+        
+        
+    </label>
+    
+    <ul class="results">
+        <Rentals::Filter @rentals={{@rentals}} @query={{this.query}} as |results|>
+      {{#each results as |rental|}}
+        <li><Rental @rental={{rental}} /></li>
+      {{/each}}
+    </Rentals::Filter>
+    </ul>
+</div>
