@@ -1,28 +1,20 @@
 <div class="rentals">
-    <label >
-        <span>Where would you like to stay?</span>
-        {{!-- <tr class="inputbutton">
-            <th>
-                <button type="submit" class = "clear-button">Clear</button>
-            </th>
-            <th>
-                <Input class="light" @value = {{this.query}} /> 
-            </th>
-        </tr> --}}
-        {{!-- <div class="searchbox">
-            <form>
-                <button type="submit" >Clear</button>
-                <Input class="light" @value = {{this.query}} /> 
-            </form>
-        </div> --}}
-        <form> 
-            <input type="text" name="text" class="search" placeholder="Search here!">
-            <input type="submit" name="submit" class="submit" value="Search">
-        </form>
-            
-        
-        
-    </label>
+    <label>
+    <span>Where would you like to stay?</span>
+    <div class="search-button">
+        <Input @value={{this.query}} 
+            class="light" 
+            {{on 'keyup' this.updateButtonState}}/>
+
+        <button type="button" class="button-class" 
+            disabled = {{this.isButtonDisabled}}
+            {{on 'click' this.clearQuery}} 
+            title="{{if this.isButtonDisabled "disabled" "enabled" }}">
+            Clear
+        </button>
+    </div>
+    
+  </label>
     
     <ul class="results">
         <Rentals::Filter @rentals={{@rentals}} @query={{this.query}} as |results|>

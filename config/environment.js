@@ -49,6 +49,6 @@ module.exports = function (environment) {
 
   ENV.MAPBOX_ACCESS_TOKEN =
     'pk.eyJ1Ijoic2F1cmFiaDA1IiwiYSI6ImNreG0ycGZqczFhNzQycW81dTM2emJlOTAifQ.kYIfGtiYRQHVKh49A1cwGg';
-    
+
   return ENV;
 };

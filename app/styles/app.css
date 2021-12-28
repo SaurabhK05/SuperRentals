@@ -9,16 +9,33 @@
   padding: 0;
 }
 
-.search {
-  width: 75%;
+
+
+.search-button{
+  position: relative;
+  display: flex;
+  max-width: 600px;
+  margin: auto;
 }
 
-
-.submit {
+.button-class{
+  float: left; 
+  right: 0;
+  border-radius: 5px;
+  right: 6px;
+  border: none;
+  top: 24px;
+  height: 46px;
+  cursor: pointer;
+  color: white;
+  background-color: #1e90ff;
   width: 70px;
-  background-color: #1c87c9;
-  color: #111;
-} 
+}
+
+.button-class:disabled{
+  background-color: grey;
+  cursor: not-allowed;
+}
 
 .light {
   font-weight: 300;
