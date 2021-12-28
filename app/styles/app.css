@@ -9,6 +9,25 @@
   padding: 0;
 }
 
+.search {
+  width: 75%;
+}
+
+
+.submit {
+  width: 70px;
+  background-color: #1c87c9;
+  color: #111;
+} 
+
+.light {
+  font-weight: 300;
+}
+.clear-button{
+  margin-left: 30%;
+  padding: 5px;
+}
+
 body,
 h1,
 h2,
@@ -427,9 +446,7 @@ p {
  * Utilities
  */
 
-.light {
-  font-weight: 300;
-}
+
 
 .left {
   float: left;
